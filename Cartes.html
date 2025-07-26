@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🃏 Jeu de Bataille</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="title">🃏 JEU DE BATAILLE 🃏</h1>
+      </div>
+
+      <div class="scores">
+        <div class="score">
+          <span>🎮 Joueur:</span>
+          <span id="player-score">0</span>
+        </div>
+        <div class="score">
+          <span>🤖 Ordinateur:</span>
+          <span id="computer-score">0</span>
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-section">
+          <span>Cartes Joueur:</span>
+          <div class="progress-bar">
+            <div class="progress-fill" id="player-progress">
+              <div class="progress-text" id="player-cards-count">26</div>
+            </div>
+          </div>
+        </div>
+        <div class="progress-section">
+          <span>Cartes Ordinateur:</span>
+          <div class="progress-bar">
+            <div class="progress-fill computer" id="computer-progress">
+              <div class="progress-text" id="computer-cards-count">26</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-area">
+        <div class="battlefield">
+          <div class="player-section">
+            <div class="player-label">Ordinateur</div>
+            <div class="card face-down" id="computer-card">🂠</div>
+          </div>
+
+          <div class="vs-section">
+            <div class="vs-label">VS</div>
+            <div class="result" id="result"></div>
+          </div>
+
+          <div class="player-section">
+            <div class="player-label">Joueur</div>
+            <div class="card" id="player-card">
+              <div class="card-content">
+                <div class="card-top">?</div>
+                <div class="card-center">🃏</div>
+                <div class="card-bottom">?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="btn btn-primary" id="play-btn">
+            🎮 JOUER UNE CARTE
+          </button>
+          <button class="btn btn-secondary" id="new-game-btn">
+            🔄 NOUVELLE PARTIE
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-over-modal" id="game-over-modal">
+      <div class="modal-content">
+        <h2 class="modal-title" id="modal-title">🏆 FIN DE PARTIE 🏆</h2>
+        <div class="final-score" id="final-score"></div>
+        <button class="btn btn-primary" onclick="newGame()">🔄 REJOUER</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
